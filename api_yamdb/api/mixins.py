@@ -2,8 +2,9 @@ from rest_framework import filters, mixins, viewsets
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.serializers import BaseSerializer
 
-from .permissions import AdminOrReadOnly
 from users.validators import validate_username
+
+from .permissions import AdminOrReadOnly
 
 
 class CreateListDestroyViewSet(mixins.CreateModelMixin,

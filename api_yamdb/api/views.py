@@ -13,17 +13,18 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from .filters import TitleFilter
-from .mixins import CreateListDestroyViewSet
-from .permissions import (IsAuthorModerAdminOrReadOnly, AdminOrReadOnly,
-                          IsRoleAdmin)
-from .serializers import (
-    CategorySerializer, CommentSerializer, GenreSerializer,
-    NotAdminUserSerializer, ReviewSerializer, SignUpSerializer,
-    TitlePostSerialzier, TitleSerializer, TokenSerializer, UserSerializer
-)
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
+from .filters import TitleFilter
+from .mixins import CreateListDestroyViewSet
+from .permissions import (AdminOrReadOnly, IsAuthorModerAdminOrReadOnly,
+                          IsRoleAdmin)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, NotAdminUserSerializer,
+                          ReviewSerializer, SignUpSerializer,
+                          TitlePostSerialzier, TitleSerializer,
+                          TokenSerializer, UserSerializer)
 
 
 class ConfCodeView(APIView):

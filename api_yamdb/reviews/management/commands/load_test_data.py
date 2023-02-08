@@ -1,5 +1,4 @@
 from collections import OrderedDict
-
 from csv import DictReader
 
 from django.conf import settings

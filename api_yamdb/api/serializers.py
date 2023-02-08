@@ -4,10 +4,11 @@ from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from .mixins import UsernameSerializer
 from reviews.models import Category, Comment, Genre, Review, Title
 from reviews.validators import validate_year
 from users.models import User
+
+from .mixins import UsernameSerializer
 
 
 class SignUpSerializer(serializers.Serializer, UsernameSerializer):

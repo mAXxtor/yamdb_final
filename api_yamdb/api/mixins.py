@@ -1,7 +1,6 @@
 from rest_framework import filters, mixins, viewsets
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.serializers import BaseSerializer
-
 from users.validators import validate_username
 
 from .permissions import AdminOrReadOnly

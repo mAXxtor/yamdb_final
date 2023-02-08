@@ -20,7 +20,7 @@ API для проекта YaMDb, который собирает отзывы п
 Для ОС на базе Linux. Клонировать репозиторий и перейти в папку с инфраструктурой в командной строке:
 
 ```
-git clone https://github.com/mAXxtor/infra_sp2.git
+git clone https://github.com/mAXxtor/yamdb_final.git
 ```
 ```
 cd infra_sp2/

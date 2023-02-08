@@ -54,6 +54,9 @@ scp ./nginx/default.conf <username>@<host>:/home/<username>/nginx/
 # Cекретный ключ Django проекта (https://djecrety.ir/)
 SECRET_KEY=<ключ>
 
+# Разрешенные хосты/домены для которых работает Django проект (открыть доступ для всех - '*')
+ALLOWED_HOSTS=<'*'>
+
 # Движок базы данных
 DB_ENGINE=django.db.backends.postgresql
 

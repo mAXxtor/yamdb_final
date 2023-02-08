@@ -14,7 +14,8 @@ SECRET_KEY = os.getenv(
 
 if socket.gethostname() != 'localhost':
     DEBUG = False
-DEBUG = True
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = [os.getenv(
     'ALLOWED_HOSTS',

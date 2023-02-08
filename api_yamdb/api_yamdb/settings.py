@@ -1,4 +1,5 @@
 import os
+import socket
 from datetime import timedelta
 
 from dotenv import load_dotenv
@@ -11,9 +12,13 @@ SECRET_KEY = os.getenv(
     'SECRET_KEY',
     default='a+uyo%)tq%n$^uo&xei41!2f4zp0&2o=s(vhh=u!o_!*!qz(ij')
 
-DEBUG = False
+if socket.gethostname() != 'localhost':
+    DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.getenv(
+    'ALLOWED_HOSTS',
+    default='*')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',

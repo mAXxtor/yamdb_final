@@ -31,11 +31,31 @@ CI/CD для проекта API YaMDb, который собирает отзы�
 
 
 ## Подготовка сервера:
-Войти на свой удаленный сервер, установить и запустить [Docker](https://docs.docker.com/engine/install/) и [Docker-compose](https://docs.docker.com/compose/install/) :
+Войти на свой удаленный сервер, установить и запустить [Docker](https://docs.docker.com/engine/install/) и [Docker-compose](https://docs.docker.com/compose/install/):
 ```
 sudo apt install docker.io
 sudo apt install docker-compose
 sudo systemctl start docker
+```
+Для работы ssl сертификата установить certbot:
+```
+sudo apt install snapd
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+Скачать скрипт в рабочую директорию:
+```
+curl -L https://raw.githubusercontent.com/wmnnd/nginx-certbot/master/init-letsencrypt.sh > init-letsencrypt.sh
+```
+Отредактировать скрипт. Добавить домен в переменную domains и действующую электронную почту в переменную email:
+```
+nano init-letsencrypt.sh
+```
+Добавляем разрешения на запуск скрипта и запускаем его:
+```
+chmod +x init-letsencrypt.sh
+sudo ./init-letsencrypt.sh
 ```
 
 
@@ -167,4 +187,3 @@ http://localhost/api/v1/titles/{title_id}/reviews/{review_id}/comments/
 
    [Yandex Practicum]: <https://practicum.yandex.ru/>
    [Максим Вербицкий]: <https://github.com/mAXxtor>
-

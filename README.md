@@ -125,7 +125,6 @@ TELEGRAM_TOKEN - токен бота (получить токен можно у 
 # Булево значение для подключения базы данных SQLlite (True) вместо PostgreSQL (False):
 TEST_DB=<True/False>
 ```
-
 Развернуть контейнеры через терминал на удаленном сервере:
 ```
 sudo docker-compose up -d --build

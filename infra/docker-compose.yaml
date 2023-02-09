@@ -27,6 +27,8 @@ services:
       - media_value:/var/html/media/
     depends_on:
       - web
+  certbot:
+    image: certbot/certbot
 
 volumes:
   static_value:

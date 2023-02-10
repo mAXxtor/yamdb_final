@@ -121,9 +121,7 @@ TELEGRAM_TO=<id>
 
 # Token telegram бота (https://t.me/BotFather):
 TELEGRAM_TOKEN - токен бота (получить токен можно у @BotFather, /token, имя бота)
-```
-Для использования тестовой базы данных SQLlite добавить в [Variables GitHub Actions](https://github.com/<username>/yamdb_final/settings/variables/actions):
-```
+
 # Булево значение для подключения базы данных SQLlite (True) вместо PostgreSQL (False):
 TEST_DB=<True/False>
 ```

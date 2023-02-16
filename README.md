@@ -6,7 +6,6 @@
 CI/CD для проекта API YaMDb, который собирает отзывы пользователей на произведения. Произведения делятся на категории, такие как «Книги», «Фильмы», «Музыка». Список категорий может быть расширен. Произведению может быть присвоен жанр из списка предустановленных. Пользователи могут оставить к произведениям текстовые отзывы и поставить произведению оценку, из пользовательских оценок формируется усреднённая оценка произведения — рейтинг.
 
 Временно доступен по адресу [проект](http://tubemax.hopto.org/admin/)
-Для ревьюера создана учетка test/test
 
 
 ## Технологии
@@ -159,25 +158,25 @@ sudo docker-compose exec web python manage.py load_test_data
 Получение списка всех категорий:
 ```
 GET
-http://localhost/api/v1/categories/
+http://<IP-сервера>/api/v1/categories/
 ```
 
 Получение списка всех произведений:
 ```
 GET
-http://localhost/api/v1/titles/
+http://<IP-сервера>/api/v1/titles/
 ```
 
 Получение списка всех отзывов к произведению:
 ```
 GET
-http://localhost/api/v1/titles/{title_id}/reviews/
+http://<IP-сервера>/api/v1/titles/{title_id}/reviews/
 ```
 
 Получение списка всех комментариев к отзыву:
 ```
 GET
-http://localhost/api/v1/titles/{title_id}/reviews/{review_id}/comments/
+http://<IP-сервера>/api/v1/titles/{title_id}/reviews/{review_id}/comments/
 ```
 
 ### Полная документация по Api содержится в [ReDoc](http://localhost/redoc/).
